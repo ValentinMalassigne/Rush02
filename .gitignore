@@ -3,3 +3,4 @@ rush-02
 test*
 *.swp
 *.swo
+*.o
