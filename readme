@@ -1,0 +1,15 @@
+A faire :
+-Penser a free tous les tableaux
+-Norminette
+-Remplacer le atoi par ft_atoi
+
+
+-Ignorer les valeurs tel "54 " fifty-four"
+-Verifier que ca marche peut importe l'ordre de stockage
+-Verfier que les empty lines ne posent pas de problemes
+-Si on a un pb dans le parsing : "Dict Error\n",
+ donc passer les dict en pointeur de fonction,
+ et qu'elle return un int.
+
+Fait : 
+-Verifier si ca marche bien avec les n espaces avant et apres les ":"
