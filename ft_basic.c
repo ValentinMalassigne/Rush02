@@ -47,28 +47,21 @@ int	ft_strlen(char *str)
 	return (c);
 }
 
-int	ft_atoi(char *str)
+unsigned int	ft_atoi(char *str)
 {
-	int	i;
-	int	r;
-	int	h;
+	unsigned int	i;
+	unsigned int	res;
 
 	i = 0;
-	r = 0;
-	h = 1;
-	while (str[i] == ' ' || str[i] == '\n' || str[i] == '\t'
-		|| str[i] == '\f' || str[i] == '\r' || str[i] == '\v')
-		i++;
-	while (str[i] == '+' || str[i] == '-')
-	{
-		if (str[i] == '-')
-			h *= -1;
-		i++;
-	}
+	res = 0;
+    while (str[i] <= '0' && str[i] >= '9')
+    {
+        i++;
+    }
 	while (str[i] >= '0' && str[i] <= '9')
 	{
-		r = r * 10 + (str[i] - '0');
+		res = res * 10 + (str[i] - '0');
 		i++;
 	}
-	return (r * h);
+	return (res);
 }
