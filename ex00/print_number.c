@@ -6,7 +6,7 @@
 /*   By: liguyon <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/18 12:44:45 by liguyon           #+#    #+#             */
-/*   Updated: 2023/03/18 22:41:26 by liguyon          ###   ########.fr       */
+/*   Updated: 2023/03/18 22:45:07 by liguyon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,14 +29,12 @@ void	print_zero(t_number_dict *dict)
 
 void	print_number(t_list *number)
 {
-	unsigned int	key;
 	t_number_dict	*dict;
 	char			*str;
 
 	while (number->next != NULL)
 	{
 		dict = number->content;
-		key = dict->number;
 		str = dict->word_en;
 		ft_putstr(str);
 		ft_putchar(' ');
