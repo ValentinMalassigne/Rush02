@@ -12,10 +12,17 @@
 
 #ifndef RUSH02_H
 # define RUSH02_H
+# include <stdlib.h>
+# include <unistd.h>
+# include <stdio.h>
 
+void	ft_putchar(char c);
+void	ft_putstr(char *str);
+int		ft_strlen(char *str);
+int		ft_atoi(char *str);
 typedef struct s_number_dict
 {
-	int	number;
+	int		number;
 	char	*word_en;
 }	t_number_dict;
 
