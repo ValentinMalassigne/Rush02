@@ -54,7 +54,7 @@ unsigned int	ft_atoi(char *str)
 
 	i = 0;
 	res = 0;
-    while (str[i] <= '0' && str[i] >= '9')
+    while (str[i] < '0' || str[i] > '9')
     {
         i++;
     }
