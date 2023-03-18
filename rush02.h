@@ -22,7 +22,6 @@ int		ft_strlen(char *str);
 int		ft_atoi(char *str);
 
 
-
 typedef struct s_number_dict
 {
 	int	number;
