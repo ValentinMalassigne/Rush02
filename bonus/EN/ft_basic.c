@@ -6,12 +6,12 @@
 /*   By: llaigle <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/18 16:12:13 by llaigle           #+#    #+#             */
-/*   Updated: 2023/03/19 13:43:37 by liguyon          ###   ########.fr       */
+/*   Updated: 2023/03/19 14:24:50 by liguyon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "rush02.h"
 #include <limits.h>
+#include "rush02.h"
 
 void	ft_putchar(char c)
 {
@@ -42,7 +42,7 @@ int	ft_strlen(char *str)
 
 long	ft_atol(char *str)
 {
-	long	i;
+	int		i;
 	long	res;
 
 	i = 0;
