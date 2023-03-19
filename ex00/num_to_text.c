@@ -6,7 +6,7 @@
 /*   By: liguyon <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/18 18:02:51 by liguyon           #+#    #+#             */
-/*   Updated: 2023/03/18 22:33:04 by liguyon          ###   ########.fr       */
+/*   Updated: 2023/03/19 16:27:57 by liguyon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -100,24 +100,22 @@ int	convert_number(unsigned int n, t_number_dict *dict, t_list **number)
 int	num_to_text(unsigned int n, t_number_dict *dict)
 {
 	t_list	*head;
-	t_list	*copy;
 
 	if (n == 0)
 	{
 		print_zero(dict);
+		free(dict);
 		return (0);
 	}
 	head = NULL;
 	if (convert_number(n, dict, &head))
-		return (ERROR_DICT);
-	print_number(head);
-	copy = head;
-	while (copy->next != NULL)
 	{
-		copy = head->next;
-		free(head);
-		head = copy;
+		free(dict);
+		free_all(head);
+		return (ERROR_DICT);
 	}
-	free(copy);
+	print_number(head);
+	free(head);
+	free(dict);
 	return (0);
 }

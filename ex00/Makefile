@@ -6,7 +6,7 @@
 #    By: liguyon <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/03/18 12:04:44 by liguyon           #+#    #+#              #
-#    Updated: 2023/03/18 22:17:20 by liguyon          ###   ########.fr        #
+#    Updated: 2023/03/19 16:51:27 by liguyon          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,6 +19,8 @@ SRC		:= 	main.c \
 			linked_lists.c \
 			print_number.c \
 			num_to_text.c \
+			libft.c \
+			parser.c \
 
 # Includes
 INCLUDE		:= rush02.h

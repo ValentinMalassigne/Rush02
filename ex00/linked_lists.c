@@ -6,7 +6,7 @@
 /*   By: liguyon <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/18 16:02:46 by liguyon           #+#    #+#             */
-/*   Updated: 2023/03/18 22:27:02 by liguyon          ###   ########.fr       */
+/*   Updated: 2023/03/19 16:26:47 by liguyon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,4 +37,18 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 	}
 	else if (lst)
 		*lst = new;
+}
+
+void	free_all(t_list *head)
+{
+	t_list	*copy;
+
+	copy = head;
+	while (copy->next != NULL)
+	{
+		copy = copy->next;
+		free(head);
+		head = copy;
+	}
+	free(head);
 }

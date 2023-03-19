@@ -6,11 +6,10 @@
 /*   By: llaigle <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/18 16:12:13 by llaigle           #+#    #+#             */
-/*   Updated: 2023/03/19 14:23:13 by liguyon          ###   ########.fr       */
+/*   Updated: 2023/03/19 16:48:41 by liguyon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <limits.h>
 #include "rush02.h"
 
 void	ft_putchar(char c)
@@ -51,7 +50,7 @@ long	ft_atol(char *str)
 	{
 		res = res * 10 + (str[i] - '0');
 		i++;
-		if (res > UINT_MAX)
+		if (res > 4294967295)
 			return (-1);
 	}
 	return (res);
