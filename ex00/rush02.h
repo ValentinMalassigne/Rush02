@@ -6,7 +6,7 @@
 /*   By: liguyon <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/18 12:28:04 by liguyon           #+#    #+#             */
-/*   Updated: 2023/03/19 14:21:07 by liguyon          ###   ########.fr       */
+/*   Updated: 2023/03/19 15:11:30 by liguyon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # define ERROR_ARG 101
 # define ERROR_DICT 102
+# define DICT_SIZE 32
 
 # include <stdlib.h>
 # include <unistd.h>

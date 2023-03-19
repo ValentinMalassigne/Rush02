@@ -6,7 +6,7 @@
 /*   By: liguyon <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/18 21:19:28 by liguyon           #+#    #+#             */
-/*   Updated: 2023/03/18 22:35:08 by liguyon          ###   ########.fr       */
+/*   Updated: 2023/03/19 15:11:51 by liguyon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,24 @@ int	print_error(int error)
 	return (0);
 }
 
+int	num_is_valid(char *str)
+{
+	int	i;
+
+	i = -1;
+	while (str[++i])
+	{
+		if (!(str[i] >= '0' && str[i] <= '9'))
+			return (0);
+	}
+	return (1);
+}
+
 // temporary main for testing
 int	main(int ac, char **av)
 {
-	t_number_dict	dict[] = {
+	long	n;
+	t_number_dict	*dict = {
 		{100, "hundred"},
 		{1000, "thousand"},
 		{1000000, "million"},
@@ -59,9 +73,19 @@ int	main(int ac, char **av)
 		{0, "zero"},
 		};
 
-	if (ac > 3)
+	if (ac < 2 || ac > 3)
 		return (print_error(ERROR_ARG));
-	(void)av;
-	if (num_to_text(2147483647, dict) == ERROR_DICT)
+	if (!num_is_valid(av[1]))
+		return (print_error(ERROR_ARG));
+	n = ft_atol(av[1]);
+	if (n == -1)
+		return (print_error(ERROR_ARG));
+	dict = malloc(sizeof(t_number_dict) * DICT_SIZE);
+	if (!dict)
+		return (0);
+	if (parse(*dict, ac, av) == ERROR_DICT)
 		return (print_error(ERROR_DICT));
+	if (num_to_text((unsigned int)n, dict) == ERROR_DICT)
+		return (print_error(ERROR_DICT));
+	return (0);
 }
