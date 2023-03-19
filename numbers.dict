@@ -11,8 +11,12 @@
 10: ten
 11: eleven
 12: twelve
+twelve : oui
 13: thirteen
 14: fourteen
+
+
+
 15: fifteen
 16: sixteen
 17: seventeen
@@ -23,6 +27,11 @@
 40: forty
 50: fifty
 60: sixty
+
+
+
+
+
 70: seventy
 80: eighty
 90: ninety
@@ -30,3 +39,9 @@
 1000:     thousand
 1000000: million
 1000000000: billion
+
+
+
+
+
+
