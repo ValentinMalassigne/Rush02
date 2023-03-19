@@ -5,14 +5,10 @@ A faire :
 -changer les valeurs en dur dans les mallocs
 
 
-
--Verifier que ca marche peut importe l'ordre de stockage
--Verifier 
--Si on a un pb dans le parsing : "Dict Error\n",
- donc passer les dict en pointeur de fonction,
- et qu'elle return un int.
-
 Fait : 
 -Verifier si ca marche bien avec les n espaces avant et apres les ":"
 -Ignorer les valeurs tel "54 " fifty-four", un 0 est return jusqu'a get_numbers_dict
 -Verfier que les empty lines ne posent pas de problemes
+-Verifier que le word n'est pas empty
+-Verifier que le word peut etre un white space
+-Verifier que ca marche peut importe l'ordre de stockage

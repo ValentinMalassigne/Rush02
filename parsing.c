@@ -189,7 +189,6 @@ int main()
 				lines[line_number] = get_next_line(file_content, line_length);
 				line_number++;
 			}
-			
 			file_content += line_length + 1;
 		}
 		numbers_dict = malloc(line_number * sizeof(t_number_dict));
