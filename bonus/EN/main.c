@@ -6,7 +6,7 @@
 /*   By: liguyon <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/18 21:19:28 by liguyon           #+#    #+#             */
-/*   Updated: 2023/03/18 22:35:08 by liguyon          ###   ########.fr       */
+/*   Updated: 2023/03/19 13:32:04 by liguyon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,6 +62,6 @@ int	main(int ac, char **av)
 	if (ac > 3)
 		return (print_error(ERROR_ARG));
 	(void)av;
-	if (num_to_text(2147483647, dict) == ERROR_DICT)
+	if (num_to_text(1000054, dict) == ERROR_DICT)
 		return (print_error(ERROR_DICT));
 }

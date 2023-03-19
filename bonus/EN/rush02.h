@@ -6,7 +6,7 @@
 /*   By: liguyon <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/18 12:28:04 by liguyon           #+#    #+#             */
-/*   Updated: 2023/03/18 22:33:16 by liguyon          ###   ########.fr       */
+/*   Updated: 2023/03/19 13:44:50 by liguyon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,14 +32,14 @@ typedef struct s_list
 	struct s_list	*next;
 }	t_list;
 
-unsigned int	ft_atoi(char *str);
-void			ft_putchar(char c);
-void			ft_putstr(char *str);
-t_list			*ft_lstnew(void *content);
-void			print_number(t_list *number);
-void			print_zero(t_number_dict *dict);
-void			ft_lstadd_back(t_list **lst, t_list *new);
-int				num_to_text(unsigned int n, t_number_dict *dict);
-int				ft_strlen(char *str);
+long	ft_atol(char *str);
+void	ft_putchar(char c);
+void	ft_putstr(char *str);
+t_list	*ft_lstnew(void *content);
+void	print_number(t_list *number);
+void	print_zero(t_number_dict *dict);
+void	ft_lstadd_back(t_list **lst, t_list *new);
+int		num_to_text(unsigned int n, t_number_dict *dict);
+int		ft_strlen(char *str);
 
 #endif

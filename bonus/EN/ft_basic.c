@@ -6,11 +6,12 @@
 /*   By: llaigle <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/18 16:12:13 by llaigle           #+#    #+#             */
-/*   Updated: 2023/03/18 18:45:44 by liguyon          ###   ########.fr       */
+/*   Updated: 2023/03/19 13:43:37 by liguyon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "rush02.h"
+#include <limits.h>
 
 void	ft_putchar(char c)
 {
@@ -39,10 +40,10 @@ int	ft_strlen(char *str)
 	return (c);
 }
 
-unsigned int	ft_atoi(char *str)
+long	ft_atol(char *str)
 {
-	unsigned int	i;
-	unsigned int	res;
+	long	i;
+	long	res;
 
 	i = 0;
 	res = 0;
@@ -50,6 +51,8 @@ unsigned int	ft_atoi(char *str)
 	{
 		res = res * 10 + (str[i] - '0');
 		i++;
+		if (res > UINT_MAX)
+			return (-1);
 	}
 	return (res);
 }
